@@ -1,0 +1,71 @@
+/* Main container styling */
+.main {
+    background-color: #f8f9fa;
+}
+
+/* Chat container */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* User message style */
+.user-msg {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 15px 15px 0 15px;
+    margin-bottom: 10px;
+    text-align: right;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Bot message style (Markdown result) */
+.bot-msg {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px 15px 15px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff4b4b;
+}
+
+/* Headings in bot response */
+.bot-msg h1 {
+    color: #27ae60;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.bot-msg h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.stButton>button {
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #d93d3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field styling */
+.stTextInput>div>div>input {
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    padding: 10px;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #ff4b4b;
+    box-shadow: none;
+}
