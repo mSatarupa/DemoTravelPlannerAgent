@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import streamlit as st
 import requests
 import datetime
@@ -5,7 +6,9 @@ import datetime
 
 # --- Configuration ---
 import os
-BASE_URL = "http://127.0.0.1:8000"
+load_dotenv()   
+BASE_URL = "http://127.0.0.1:8080"
+BASE_URL = os.getenv("BASE_URL", BASE_URL)  # Fallback to default if not set in .env
 
 st.set_page_config(
     page_title="Travel Planner Agent",
@@ -75,7 +78,8 @@ if submit_button:
                 try:
                     payload = {"question": query}
                     # Timeout set to 120s because agents can take time
-                    response = requests.post("http://127.0.0.1:8080/query", json=payload, timeout=120)
+                    
+                    response = requests.post(f"{BASE_URL}/query", json=payload, timeout=120)
                     
                     if response.status_code == 200:
                         answer = response.json().get("answer", "No answer returned.")
