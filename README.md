@@ -28,4 +28,4 @@ When you ask for a trip plan, it doesn’t just generate suggestions, it activel
 - **Tools & APIs**:  
   - **OpenWeatherMap**: Weather Data
   - **Fixer.io**: Currency Exchange Rates
-  - **Google Places** (Optional support)
+  - **Google Places**: Places Info
